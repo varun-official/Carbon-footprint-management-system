@@ -2,181 +2,110 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- <link rel="stylesheet" href="../static/css/Prediction.css" /> -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prediction</title>
-    <style>
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 10px;
-      }
-      .inside {
-        margin-left: 30px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-right: 50px;
-      }
-      .container .inside {
-        width: 100%;
-      }
-      .inside_left img {
-        margin-top: -20px;
-      }
-      .inside_right {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-      }
 
-            .inside_1 {
-        margin-left: 30px;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-      }
-      .container .inside_1 {
-        width: 100%;
-      }
-      .inside_1_left img {
-        margin-top: -20px;
-        margin-right: 50px;
-      }
-      .inside_right {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../static/css/Prediction.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" href="../static/image/icon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Prediction</title>
+</head>
 
-table { 
-	width: 750px; 
-	border-collapse: collapse; 
-	margin:20px auto;
-	}
-
-/* Zebra striping */
-tr:nth-of-type(odd) { 
-	background: #eee; 
-	}
-
-th { 
-	background: #3498db; 
-	color: white; 
-	font-weight: bold; 
-	}
-
-td, th { 
-	padding: 10px; 
-	border: 1px solid #ccc; 
-	text-align: left; 
-	font-size: 18px;
-	}
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Carbon Footprint Management</h1>
-
-      <div class="inside">
-        <div class="inside_left">
-          <h2>1. Present Electricity Consumption of Organization</h2>
-          <img src="../static/image/datasetElectricity.png" alt="" srcset="" />
-        </div>
-        <p>The graph plotted here show the electricity consumption of the organization from the day it started. This help in the forecasting of
-        electricity consumption and getting carbon footprint generation of the organization.</p>  
-        </p>
+<body>
+  <div class="container">
+    <h1>Carbon Footprint Management</h1>
+    <div class="inside" data-aos="zoom-in-up" data-aos-duration="1500">
+      <div class="inside_left">
+        <h2>1. Present Electricity Consumption of Organization</h2>
+        <img src="../static/image/datasetElectricity.png" alt="" srcset="" />
       </div>
-
-      <div class="inside_1">
-        <div class="inside_1_left">
-          <h2>2. Carbon Footprint Emission done by the Organization</h2>
-          <img
-            src="../static/image/initialCarbonFootprint.png"
-            alt=""
-            srcset=""
-          />
-        </div>
-                <p>The graph plotted here show the Carbon Footprint Emission of the organization from the day it started. This help us to get 
-                  carbon footprint generation done by organization till date.
-        </p>
-      </div>
-
-      <div class="inside">
-        <div class="inside_left">
-          <h2>3. Future Electricity Consumption Prediction of Organization</h2>
-          <img
-            src="../static/image/futureElectricity.png"
-            alt=""
-            srcset=""
-          />
-        </div>
-        <p>The graph plotted here show the electricity consumption of the organization for the next 5 years. This help in the forecasting of
-        carbon footprint, where electricity generation directly affect carbon footprint generation.</p>
-      </div>
-
-      <div class="inside_1">
-
-        <div class="inside_1_left">
-          <h2>4. Future solar energy production of Organization</h2>
-          <img src="../static/image/futureSolarPower.png" alt="" srcset="" />
-        </div>
-                <p>The graph plotted here show the electricity consumption of the organization for the next 5 years. Where solar energy is one of the alternative and alternative
-          green energy for electricity.
-        </p>
-      </div>
-
-      <div class="inside">
-        <div class="inside_left">
-          <h2>5. Future Carbon Footprint Emission of Organization</h2>
-          <img
-            src="../static/image/futureCarbonFootprint.png"
-            alt=""
-            srcset=""
-            style="height: 700px; width: 1400px"
-          />
-        </div>
-      </div>
-      {% if a %}
-      {%if b %}
-      {%if c %}
-<div style="margin-top:50px">
-
-      <h2 style="text-align:center;">Total of <span style="color:green">{{b}}</span>  Units of electricity saved by organization until {{a}} using solar energy</h2>
-      <h2  style="text-align:center;">Total of <span style="color:green">{{c}}</span> Kgs of Carbon Footprint Abated</h2>
-</div>
-
-      {% endif%}
-      {% endif%}
-      {% endif%}
-
-
-
-      <h1>Health Impact</h1>
-
-  <table>
-  <thead>
-    <tr>
-      <th>AQI Reading</th>
-      <th>Disease Predicted</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for row in d%}
-    <tr>
-      <td data-column="First Name">{{row[0]}}</td>
-      <td data-column="Last Name">{{row[1]}}</td>
-    </tr>
-    {% endfor%}
-  </tbody>
-</table>
-
+      <p>The graph plotted here show the electricity consumption of the organization from the day it started. This
+        help in the forecasting of electricity consumption and getting carbon footprint generation of the
+        organization. </p>
     </div>
-  </body>
+
+    <div class="inside_1" data-aos="zoom-in-up" data-aos-duration="1500">
+      <div class="inside_1_left">
+        <h2>2. Carbon Footprint Emission done by the Organization</h2>
+        <img src="../static/image/initialCarbonFootprint.png" alt="" srcset="" />
+      </div>
+      <p>The graph plotted here show the Carbon Footprint Emission of the organization from the day it started.
+        This help us to get
+        carbon footprint generation done by organization till date.
+      </p>
+    </div>
+
+    <div class="inside" data-aos="zoom-in-up" data-aos-duration="1500">
+      <div class="inside_left">
+        <h2>3. Future Electricity Consumption Prediction of Organization</h2>
+        <img src="../static/image/futureElectricity.png" alt="" srcset="" />
+      </div>
+      <p>The graph plotted here show the electricity consumption of the organization for the next 5 years. This
+        help in the forecasting of
+        carbon footprint, where electricity generation directly affect carbon footprint generation.</p>
+    </div>
+
+    <div class="inside_1" data-aos="zoom-in-up" data-aos-duration="1500">
+
+      <div class="inside_1_left">
+        <h2>4. Future solar energy production of Organization</h2>
+        <img src="../static/image/futureSolarPower.png" alt="" srcset="" />
+      </div>
+      <p>The graph plotted here show the electricity consumption of the organization for the next 5 years. Where
+        solar energy is one of the alternative and alternative
+        green energy for electricity.
+      </p>
+    </div>
+
+    <div class="inside" data-aos="zoom-in-up" data-aos-duration="1500">
+      <div class="inside_left">
+        <h2>5. Future Carbon Footprint Emission of Organization</h2>
+        <img src="../static/image/futureCarbonFootprint.png" alt="" srcset="" style="height: 700px; width: 1400px" />
+      </div>
+    </div>
+    {% if a %}
+    {%if b %}
+    {%if c %}
+    <div style="margin-top:50px">
+
+      <h2 style="text-align:center;">Total of <span style="color:green">{{b}}</span> Units of electricity saved by
+        organization until {{a}} using solar energy</h2>
+      <h2 style="text-align:center;">Total of <span style="color:green">{{c}}</span> Kgs of Carbon Footprint
+        Abated</h2>
+    </div>
+
+    {% endif%}
+    {% endif%}
+    {% endif%}
+
+
+
+    <h1>Health Impact</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>AQI Reading</th>
+          <th>Disease Predicted</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in d%}
+        <tr>
+          <td data-column="First Name">{{row[0]}}</td>
+          <td data-column="Last Name">{{row[1]}}</td>
+        </tr>
+        {% endfor%}
+      </tbody>
+    </table>
+
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>

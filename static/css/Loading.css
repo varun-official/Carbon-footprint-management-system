@@ -5,8 +5,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(249, 251, 255,0.6);  
-    }
+    background: rgba(249, 251, 255, 0.6);
+}
+
+@font-face {
+    font-family: Coolvetica Rg;
+    font-weight: bold;
+    src: url('coolvetica rg.ttf');
+}
 
 .boxes {
     height: 32px;
@@ -20,6 +26,7 @@ body {
     -webkit-transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
     transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
 }
+
 .boxes .box {
     width: 32px;
     height: 32px;
@@ -38,18 +45,21 @@ body {
     -webkit-animation: box1 1s linear infinite;
     animation: box1 1s linear infinite;
 }
+
 .boxes .box:nth-child(2) {
     -webkit-transform: translate(0, 100%);
     transform: translate(0, 100%);
     -webkit-animation: box2 1s linear infinite;
     animation: box2 1s linear infinite;
 }
+
 .boxes .box:nth-child(3) {
     -webkit-transform: translate(100%, 100%);
     transform: translate(100%, 100%);
     -webkit-animation: box3 1s linear infinite;
     animation: box3 1s linear infinite;
 }
+
 .boxes .box:nth-child(4) {
     -webkit-transform: translate(200%, 0);
     transform: translate(200%, 0);
@@ -59,7 +69,7 @@ body {
 
 
 
-.boxes .box > div {
+.boxes .box>div {
     background: #5C8DF6;
     --translateZ: 15.5px;
     --rotateY: 0deg;
@@ -76,21 +86,24 @@ body {
     transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
 }
 
-.boxes .box > div:nth-child(1) {
+.boxes .box>div:nth-child(1) {
     top: 0;
     left: 0;
     background: #5C8DF6;
 }
-.boxes .box > div:nth-child(2) {
+
+.boxes .box>div:nth-child(2) {
     background: #145af2;
     right: 0;
     --rotateY: 90deg;
 }
-.boxes .box > div:nth-child(3) {
+
+.boxes .box>div:nth-child(3) {
     background: #447cf5;
     --rotateX: -90deg;
 }
-.boxes .box > div:nth-child(4) {
+
+.boxes .box>div:nth-child(4) {
     background: #DBE3F4;
     top: 0;
     left: 0;
@@ -102,44 +115,52 @@ body {
 
 
 @keyframes box1 {
+
     0%,
     50% {
         transform: translate(100%, 0);
     }
+
     100% {
         transform: translate(200%, 0);
     }
 }
 
 @keyframes box2 {
-    0%{
+    0% {
         transform: translate(0, 100%);
     }
+
     50% {
         transform: translate(0, 0);
     }
+
     100% {
         transform: translate(100%, 0);
     }
 }
 
 @keyframes box3 {
+
     0%,
     50% {
         transform: translate(100%, 100%);
     }
+
     100% {
         transform: translate(0, 100%);
     }
 }
 
 @keyframes box4 {
-    0%{
+    0% {
         transform: translate(200%, 0);
     }
+
     50% {
         transform: translate(200%, 100%);
     }
+
     100% {
         transform: translate(100%, 100%);
     }
