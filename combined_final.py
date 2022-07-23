@@ -51,13 +51,14 @@ def main():
     filename2 = "./Power.csv"
 
     plotter2 = predictSolar(plotter1['Date'].tail(1).values[0],filename2)
-    plotter3 = predictCarbonFootprint(plotter1,plotter2,2)
+    res1=plotter1
+    plotter3 = predictCarbonFootprint(res1,plotter2,2)
     ploti= pd.DataFrame()
     ploti['Electricity'] = df1['y']
     ploti['Date'] = df1['Date']
 
     print(ploti)
-    initial_cf = plotter1
+    initial_cf = df1
 
     initial_cf['Carbon footprint']=df1['y']*0.8
     initial_cf['Date']=df1['Date']

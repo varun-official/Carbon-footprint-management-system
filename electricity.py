@@ -124,6 +124,27 @@ def predictElec(df):
     plotter=plotter.drop(plotter.head(n_steps_in+n_steps_out).index)
     return initialDataset,plotter
 
+def preprocess(df):
+    req_columns = ['Month','Year','y','Working Hours']
+
+    for val1 in df.columns.tolist():
+        flag = 0
+        for val2 in req_columns:
+            if val1 == val2:
+               flag=1 
+               break
+        if flag == 0:
+           return 'Dataset incomplete'
+    values = df['Working Hours']      
+    df.fillna(method='bfill',axis=0,inplace=True)
+
+    df['Working Hours'] = (df['Working Hours'] - df['Working Hours'].min()) / (df['Working Hours'].max() - df['Working Hours'].min())
+    
+
+    # code here
+
+    return df
+
 def featureExtraction(df,y,X):
     print(X)
     print(y)
